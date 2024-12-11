@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/application/daily_weather_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:weather_app/weather_container.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -35,6 +41,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const DailyWeatherScreen();
+    return const WeatherContainer();
   }
 }
