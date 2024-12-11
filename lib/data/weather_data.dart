@@ -2,10 +2,9 @@ import 'dart:convert';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:http/http.dart' as http;
+import 'package:weather_app/data/secrets.dart';
 
 part 'weather_data.g.dart';
-
-const String apiKey = 'e2ef777bbbb6564b0fc5af82f422d897';
 
 class WeatherData {
   final double temperature;
